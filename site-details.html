@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>T-SPOT Bulacan</title>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+        <style>
+            .hero {
+                padding: 0;
+                position: relative;
+            }
+            .nav-btn {
+                border: none;
+                background: transparent;
+                padding: 0 20px;
+                height: 120px;
+                font-size: 20px;
+                font-weight: 700;
+                cursor: pointer;
+                position: absolute;
+                top: calc(50% - 60px);
+            }
+            .nav-btn:hover {
+                background: rgba(0, 0, 0, .2);
+            }
+            #previous-btn {
+                left: 0;
+            }
+            #next-btn {
+                right: 0;
+            }
+            .credits {
+                color: black;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <img src="images/tspotbulacan-logo.png" alt="T-SPOT Bulacan Logo"/>
+            <ul class="nav-list">
+                <li><a href="homepage.html">Home</a></li>
+                <li><a href="sites.html">Sites</a></li>
+                <li><a href="itenerarypage.html">Itenerary Planner</a></li>
+                <li><a href="eventcalendar.html">Events Calendar</a></li>
+                <li><a href="contacts.html">Contact/Help</a></li>
+                <li><a href="">Sign In</a></li>
+            </ul>
+        </header>
+        <div class="section hero" style="border: 1px solid black;">
+            <button class="nav-btn" id="previous-btn"><</button>
+            <button class="nav-btn" id="next-btn">></button>
+        </div>
+        <div class="section details">
+            <div class="title-container">
+                <h2 class="title">Barasoain Church</h2>
+                <div class="location">
+                    <p class="pin-icon"></p>
+                    <p class="address">Paseo del Congreso Street corner Don Antonio Bautista Street, Brgy. San Gabriel, Malolos, 3000</p>
+                </div>
+            </div>
+        </div>
+        <div class="section descriptions vertical">
+            <p class="description-title">Description</p>
+            <p class="description"></p>
+            <div class="history-container">
+                <img src="" alt="">
+                <div class="description-container">
+                    <p class="description-title">History</p>
+                    <p class="description"></p>
+                </div>
+            </div>
+        </div>
+        <div class="section street-view">
+
+        </div>
+        <div class="section operate">
+            <div>
+                <p class="description-title">Operating Hours</p>
+                <p class="operating-hours description"></p>
+                <p class="special-hours description">Special Hours: <br></p>
+            </div>
+            <div>
+                <p class="description-title">Entry Fees</p>
+                <p class="adult description">Adults: <br></p>
+                <p class="children description">Children (Under 12): <br></p>
+                <p class="student description">Students and Seniors: <br></p>
+            </div>
+            <div>
+                <p class="description-title">Contact Information</p>
+                <p class="address description">Address: <br></p>
+                <p class="phone description">Phone: <br></p>
+                <p class="email description">Email: <br></p>
+            </div>
+        </div>
+        <div class="section map">
+
+        </div>
+        <div class="section reviews vertical">
+            <h2 class="title">Reviews</h2>
+            <!-- 
+                User review will be based according to the amount of reviews of the user on 
+                this specific site
+            -->
+            <div class="user-review">
+
+            </div>
+        </div>
+        <div class="section submit-review vertical">
+            <div class="title-container">
+                <h2 class="title">Leave a Review</h2>
+                <p class="subtitle">We value your input and are constantly working to improve your experience on T Spot. Share your thoughts and experiences about this site to help others and provide us with feedback to enhance the website and your travel planning.</p>
+            </div>
+            <form action="">
+                <div class="vertical">
+                    <div class="input-field horizontal">
+                        <label for="name"><b>Name</b> (Optional)</label>
+                        <input type="text" name="name" id="name">
+                    </div>
+                    <!-- include rating here -->
+                    <div class="input-field vertical">
+                        <label for="title"><b>Title</b><br>What did you enjoy about your visit?</label>
+                        <input type="text" name="title" id="title">
+                    </div>
+                    <div class="input-field vertical">
+                        <label for="review"><b>Review</b><br>Tell us about your experience, tips for other visitors, etc.</label>
+                        <textarea name="review" id="review">Tell us here...</textarea>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <footer>
+            <div>
+                <img src="images/tspotbulacan-white-logo.png" alt="T-SPOT Bulacan Logo">
+                <h3>Plan Your Trip and Celebrate With Us - T Spot Has You Covered!</h3>
+                <p>Have questions, feedback, or suggestions? Whether you're planning a visit or want to know more about Bulacan, our team is here to help.</p>
+            </div>
+            <div>
+                <h3>CONTACT</h3>
+                <p> <span>Baranggay, Town, Bulacan</span></p>
+                <p> <span>tspotbulacan@gmail.com</span></p>
+                <p> <span>Need help? Call us <br> <span>09123456789</span></span></p>
+                <p>Help / FAQ</p>
+            </div>
+        </footer>
+        <div class="credits">T-Spot 2024. All rights reserved.</div>
+    </body>
+</html>

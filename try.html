@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <div style="border-bottom: 1px solid black; padding-bottom: 20px;">
+            <input type="text" name="" id="user_id">
+            <button id="search-btn" onclick="searchCars()">Search</button>
+        </div>
+        
+        
+        
+        <div class="container">
+
+            <div id="form" class="register-form" style="display: none;">
+                <form action="">
+                    <input type="text" name="" id="">
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+
+
+
+
+            <div id="records" class="records" style="display: none;">
+                <h1>Car #1</h1>
+                <p>Mustang</p>
+            </div>
+
+        </div>
+
+
+
+
+        <script>
+            function searchCars() {
+                const form = document.getElementById('form');
+                const recordContainer = document.getElementById('records');
+
+                let valid = false;
+                
+                if(valid) {
+                    form.style.display = 'none';
+                    recordContainer.style.display = 'block';
+                }
+                else {
+                    recordContainer.style.display = 'none';
+                    form.style.display = 'block';
+                }
+            }
+        </script>
+    </body>
+</html>

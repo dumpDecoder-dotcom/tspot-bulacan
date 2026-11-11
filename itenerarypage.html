@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>T-SPOT Bulacan</title>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+        <style>
+            body {
+                background: url(images/itenerary-page-background.png) no-repeat center center fixed;
+                background-size: cover;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <img src="images/tspotbulacan-logo.png" alt="T-SPOT Bulacan Logo"/>
+            <ul class="nav-list">
+                <li><a href="homepage.html">Home</a></li>
+                <li><a href="sites.html">Sites</a></li>
+                <li><a href="itenerarypage.html">Itenerary Planner</a></li>
+                <li><a href="eventcalendar.html">Events Calendar</a></li>
+                <li><a href="contacts.html">Contact/Help</a></li>
+                <li><a href="">Sign In</a></li>
+            </ul>
+        </header>
+        <div class="section hero hero-end itenerary-hero darker vertical">
+            <div class="title-container">
+                <h1 class="title">Plan Your Perfect <br> Bulacan Adventure!</h1>
+                <p class="subtitle">Our Itinerary Planner makes it simple to organize your visit. Whether you're here for a day, a weekend, or longer, T Spot helps you explore Bulacan based on your interests.</p>
+            </div>
+        </div>
+        <div class="section progress-container">
+            <div class="progress">
+                <p class="one"></p>
+                <div class="onetotwo"></div>
+                <p class="two"></p>
+                <div class="twotothree"></div>
+                <p class="three"></p>
+                <div class="threetofour"></div>
+                <p class="four"></p>
+            </div>
+        </div>
+        <div class="section step step1" id="step-1">
+            <div class="title-container">
+                <h2 class="title">Duration</h2>
+                <p class="subtitle">Choose how long you'll stay</p>
+            </div>
+            <div class="form">
+                <div class="date-field">
+                    <label for="start-date">Start</label>
+                    <input type="date" name="start-date" id="start-date">
+                </div>
+                <div class="date-field">
+                    <label for="end-date">End</label>
+                    <input type="date" name="end-date" id="end-date">
+                </div>
+                <!-- 
+                    This button will have validations on the 2 input fields before proceding to the next
+                -->
+                <button class="next btn-yellow" onclick="proceedStep()">Next</button>
+            </div>
+        </div>
+        <div class="section step step2" id="step-2" style="display: none;">
+            <div class="title-container">
+                <h2 class="title">Interests</h2>
+                <p class="subtitle">Select the experiences you're looking for</p>
+            </div>
+            <div class="interest-container">
+                <button class="interest"><img src="images/planner-heritage.png" alt=""><p>Heritage</p></button>
+                <button class="interest"><img src="images/planner-nature.png" alt=""><p>Nature and Outdoors</p></button>
+                <button class="interest"><img src="images/planner-food.png" alt=""><p>Food and Culinary</p></button>
+                <button class="interest"><img src="images/planner-festival.png" alt=""><p>Festivals and Events</p></button>
+            </div>
+            <!-- 
+                This button will also have validations before proceding to the next page
+            -->
+            <button class="next btn-blue" onclick="proceedStep()">Next</button>
+        </div>
+        <div class="section step step3" id="step-3" style="display: none;">
+            <div class="title-container">
+                <h2 class="title">Itenerary</h2>
+                <p class="subtitle">Suggested routes and destinations tailored to your preferences</p>
+            </div>
+            <div class="title-container">
+                <h2 class="smaller-title">Select Sites</h2>
+            </div>
+
+            <div class="title-container">
+                <h2 class="smaller-title">Suggested Sites</h2>
+            </div>
+            <button class="next btn-darkred" onclick="proceedStep()">Next</button>
+        </div>
+        <div class="section step step4" id="step-4" style="display: none;">
+            <div class="title-container">
+                <h2 class="title">You're All Set</h2>
+                <p class="subtitle">Ensure all destinations, activities, and travel times match your preferences and plans</p>
+            </div>
+            <button class="next btn-blue" onclick="window.print()">Print</button>
+        </div>
+        <footer>
+            <div>
+                <img src="images/tspotbulacan-white-logo.png" alt="T-SPOT Bulacan Logo">
+                <h3>Plan Your Trip and Celebrate With Us - T Spot Has You Covered!</h3>
+                <p>Have questions, feedback, or suggestions? Whether you're planning a visit or want to know more about Bulacan, our team is here to help.</p>
+            </div>
+            <div>
+                <h3>CONTACT</h3>
+                <p> <span>Baranggay, Town, Bulacan</span></p>
+                <p> <span>tspotbulacan@gmail.com</span></p>
+                <p> <span>Need help? Call us <br> <span>09123456789</span></span></p>
+                <p>Help / FAQ</p>
+            </div>
+        </footer>
+        <div class="credits darker">T-Spot 2024. All rights reserved.</div>
+
+        <script type="text/javascript">
+            function proceedStep() {
+                // Find the currently visible step
+                const currentStep = document.querySelector('.step:not([style*="display: none"])');
+                const allSteps = Array.from(document.querySelectorAll('.step'));
+
+                // Get the index of the current step
+                const currentIndex = allSteps.indexOf(currentStep);
+
+                // Hide the current step and show the next step
+                if (currentIndex !== -1 && currentIndex < allSteps.length - 1) {
+                    currentStep.style.display = 'none';
+                    allSteps[currentIndex + 1].style.display = 'flex';
+                }
+            }
+        </script>
+    </body>
+</html>

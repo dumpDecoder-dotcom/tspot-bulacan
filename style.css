@@ -1,0 +1,1252 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+:root {
+    --red: #d00e00;
+    --blue: #11569c;
+    --yellow: #ffb700;
+    --dark-red: #b91717;
+    --dark-yellow: #fea621;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    width: 100vw;
+    height: auto;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow-x: hidden;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    width: 100vw;
+    height: 10vh;
+    padding: 0 60px 0 30px;
+    background-color: white;
+    overflow: hidden;
+}
+
+header img {
+    height: 100px;
+    cursor: pointer;
+}
+
+header ul li {
+    list-style-type: none;
+    float: left;
+    margin-left: 100px;
+}
+
+header a {
+    color: black;
+    font-size: 16px;
+}
+
+header ul li:last-child a {
+    padding: 8px 30px;
+    border-radius: 10px;
+    background-color: var(--red);
+    color: white;
+}
+
+@media screen and (max-width: 1403px) {
+    header ul {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 882px) {
+    .itenerary > .blue-side > img {
+        display: none;
+    }
+}
+
+
+
+
+
+
+
+
+footer {
+    background-color: var(--yellow);
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 80px 10vw;
+    gap: 50px;
+}
+
+footer > div:first-child {
+    display: flex;
+    flex-direction: column;
+    flex: 2 0 350px;
+}
+
+footer > div:first-child > img {
+    width: 150px;
+}
+
+footer > div:first-child h3 {
+    margin-bottom: 20px;
+}
+
+footer > div:last-child {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1 0 350px;
+}
+
+footer > div:last-child > p {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+    padding-left: 5px;
+}
+
+footer > div:last-child > p > span > span {
+    font-weight: 700;
+}
+
+footer > div:last-child > p:last-child {
+    font-weight: 600;
+}
+
+footer > div:last-child > p::before {
+    font-family: 'Remixicon';
+    font-size: 20px;
+}
+
+footer > div:last-child >  p:nth-child(2)::before {
+    content: '\EF09';
+}
+
+footer > div:last-child > p:nth-child(3)::before {
+    content: '\EEF3';
+}
+
+footer > div:last-child > p:nth-child(4)::before {
+    content: '\EFE9';
+}
+
+.credits {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 5px 0;
+    color: white;
+}
+
+.credits::before {
+    font-family: 'Remixicon';
+    content: '\EBE2';
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =============== GENERAL =============== */
+
+.section {
+    display: flex;
+    width: 100vw;
+}
+
+.vertical {
+    flex-direction: column;
+}
+
+.horizontal {
+    flex-direction: row;
+}
+
+.dark {
+    background-color: rgba(0, 0, 0, .35);
+}
+
+.darker {
+    background-color: rgba(0, 0, 0, .5);
+}
+
+.title {
+    font-size: 40px;
+}
+
+.subtitle {
+    font-size: 20px;
+}
+
+.hero .title {
+    font-size: 50px;
+}
+
+.hero .subtitle {
+    font-size: 25px;
+}
+
+.smaller-title {
+    font-size: 30px;
+}
+
+.btn-action {
+    border: none;
+    border-radius: 20px;
+    font-weight: 700;
+    color: white;
+    background-color: var(--dark-yellow);
+    padding: 0 20px;
+    cursor: pointer;
+}
+
+.btn-anchor {
+    border: none;
+    min-width: fit-content;
+    max-width: fit-content;
+    max-height: 42px;
+    border-radius: 20px;
+    font-weight: 700;
+    padding: 12px 35px;
+    margin-top: 20px;
+
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-yellow,
+.btn-blue,
+.btn-red {
+    color: white;
+}
+
+.btn-yellow {
+    background-color: var(--yellow);
+}
+
+.btn-red {
+    background-color: var(--red);
+}
+
+.btn-darkred {
+    background-color: var(--dark-red);
+}
+
+.btn-blue {
+    background-color: var(--blue);
+}
+
+a {
+    text-decoration: none;
+    font-weight: 700;
+}
+
+
+
+
+
+
+
+
+/* =============== SECTIONS =============== */
+
+.hero {
+    min-height: 90vh;
+    justify-content: space-between;
+    align-items: center;
+    gap: 100px;
+    padding: 50px 15vh 110px 15vh;
+    color: white;
+}
+
+.hero .title-container {
+    width: 100%;
+}
+
+.hero > form {
+    width: 70vw;
+    position: relative;
+    max-height: 42px;
+}
+
+.hero > form input[type="text"] {
+    border: none;
+    border-radius: 20px;
+    min-height: 42px;
+    max-height: 42px;
+    width: 100%;
+    font-size: 15px;
+    padding: 0 110px 0 25px;
+    font-weight: 600;
+}
+
+.hero > form input[type="submit"] {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    height: 32px;
+}
+
+.hero > .search-site {
+    background-color: var(--yellow);
+    border-radius: 10px;
+    padding: 5px 10px;
+    width: 80%;
+    height: 52px;
+    position: absolute;
+    bottom: -26px;
+}
+
+.hero > .search-site > form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+
+.hero > .search-site input[type="text"] {
+    flex: 1 1 550px;
+}
+
+.hero > .search-site select {
+    flex: 1 1 200px;
+}
+
+.hero > .search-site input[type="text"],
+.hero > .search-site select {
+    height: 42px;
+    border-radius: 7px;
+    border: none;
+    padding: 0 20px;
+    font-weight: 600;
+}
+
+.hero > .search-site > form > #search-button {
+    width: 42px;
+    height: 42px;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--dark-red);
+    font-size: 30px;
+    font-weight: 700;
+    color: white;
+    cursor: pointer;
+}
+
+.hero > .search-site > form > #search-button::before {
+    font-family: 'Remixicon';
+    content: '\F0D1';
+}
+
+/* ========== HIGHLIGHTS ========== */
+
+.highlights {
+    background-color: white;
+    padding: 70px 0;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 70px;
+}
+
+.highlights > .title {
+    color: var(--blue);
+}
+
+.highlights > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.highlights > div > .card {
+    flex: 0 0 280px;
+    max-width: 280px;
+    aspect-ratio: 1/1;
+    border-radius: 30px;
+    background-color: white;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, .3);
+
+    padding: 50px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.highlights > div > .card > p {
+    font-size: 20px;
+}
+
+.highlights > div > .card > .card-image {
+    width: 80%;
+    aspect-ratio: 1/1;
+    background-size: cover;
+}
+
+.highlights > div > .card:first-child > .card-image {
+    background-image: url(images/heritage-card.png);
+}
+
+.highlights > div > .card:nth-child(2) > .card-image {
+    background-image: url(images/nature-card.png);
+}
+
+.highlights > div > .card:nth-child(3) > .card-image {
+    background-image: url(images/festivals-card.png);
+}
+
+.highlights > div > .card:last-child > .card-image {
+    background-image: url(images/cuisine-card.png);
+}
+
+/* ========== BLOB ========== */
+
+.blob {
+    width: 100vw;
+    height: 250px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.blob > div {
+    width: 100px;
+    height: 100%;
+    border-radius: 50px;
+    background-color: var(--yellow);
+}
+
+/* ========== FEATURED ========== */
+
+.featured {
+    padding: 70px 0;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: white;
+}
+
+.featured .title {
+    color: var(--dark-red);
+}
+
+.featured .subtitle {
+    width: 60vw;
+    text-align: center;
+}
+
+.site-container {
+    margin-top: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    width: 90%;
+}
+
+.site-container .site-card {
+    flex: 0 0 330px;
+    aspect-ratio: 1 / 1;
+    margin-bottom: 30px;
+    border-radius: 30px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 2px 2px 50px rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+    font-weight: 400;
+    transition: all .2s ease;
+}
+
+.site-card:hover {
+    transform: translateY(-5px);
+}
+
+.site-card > .category {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: var(--red);
+    border-radius: 20px;
+    padding: 5px 30px;
+    color: white;
+    font-weight: 600;
+}
+
+.site-card > .details {
+    width: 100%;
+    height: 120px;
+    background-color: white;
+    color: black;
+    border-radius: 22px;
+    padding: 20px;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 5px;
+    position: absolute;
+    bottom: 0;
+}
+
+.site-card .details .name {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.site-card .details .city::before {
+    font-family: 'Remixicon';
+    color: var(--red);
+    font-size: 17px;
+    content: '\EF09';
+}
+
+
+.site-card .details .short-desc {
+    font-style: italic;
+}
+
+.site-container .site-card {
+    /* default for now */
+    background-image: url(images/barasoain.png);
+    background-size: contain;
+    background-repeat: repeat-y;
+}
+
+
+/* ========== ITENERARY ========== */
+
+.itenerary {
+    background-color: white;
+}
+
+.itenerary > .blue-side {
+    background-color: var(--blue);
+    border-radius: 30px;
+    color: black;
+    padding: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 80px 10vw;
+    width: 80%;
+    gap: 20px;
+}
+
+.itenerary > .blue-side > div {
+    width: 70%;
+    background-color: white;
+    border-radius: 20px;
+    padding: 10px 20% 10px 10%;
+    display: flex;
+    align-items: center;
+    flex: 1 0 100px;
+    font-weight: 600;
+}
+
+.itenerary > .red-side {
+    background-color: var(--red);
+    padding: 100px 25vw 100px 10vw;
+    width: 70vw;
+    color: white;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.itenerary > .red-side > p {
+    margin-bottom: 25px;
+}
+
+.itenerary > .red-side > img {
+    position: absolute;
+    height: 105%;
+    right: -25%;
+    bottom: -.5px;
+}
+
+@media screen and (max-width: 1255px) {
+    .itenerary > .red-side > img {
+        position: relative;
+        width: 130%;
+        left: calc(50% - 60%);
+        bottom: -.5px;
+    }
+    .itenerary > .red-side {
+        padding-bottom: 0;
+        width: 100vw;
+    }
+}
+
+/* =============== EVENTS CALENDAR =============== */
+
+.events {
+    padding: 70px 0;
+    background-color: white;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 50px;
+}
+
+.events .title {
+    width: 70%;
+    text-align: center;
+    color: var(--dark-yellow);
+}
+
+.events .subtitle {
+    width: 70%;
+    text-align: center;
+}
+
+.events .map {
+    background: url(images/bulacan-green-map.png);
+    background-size: cover;
+    width: 50%;
+    aspect-ratio: 1/1;
+    position: relative;
+}
+
+.events .map > img { /* MIGHT BE CHANGED LATER ON */
+    border: 5px solid rgb(25, 93, 25);
+    width: 25%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    box-shadow: 2px 2px 20px rgba(255, 255, 255, .5);
+    position: absolute;
+}
+
+.events .map > img:nth-child(1) { /* MIGHT BE CHANGED LATER ON */
+    top: 0;
+    left: 0;
+}
+
+.events .map > img:nth-child(2) { /* MIGHT BE CHANGED LATER ON */
+    top: 100px;
+    right: -120px;
+}
+
+.events .map > img:nth-child(3) { /* MIGHT BE CHANGED LATER ON */
+    bottom: 25%;
+    left: 50%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ========================= ITENERARY PAGE ========================= */
+.hero-end {
+    justify-content: flex-end;
+}
+
+.hero-end .title-container > .subtitle {
+    width: 80%;
+}
+
+.progress-container {
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0;
+    background-color: white;
+}
+
+.progress {
+    width: 300px;
+    height: 32px;
+    position: relative;
+}
+
+.progress > .one,
+.progress > .two,
+.progress > .three,
+.progress > .four {
+    position: absolute;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 36px;
+    width: 30px;
+    height: 30px;
+    color: var(--dark-yellow);
+}
+
+.progress > .one::before,
+.progress > .two::before,
+.progress > .three::before,
+.progress > .four::before {
+    font-family: 'Remixicon';
+    content: '\F3C2';
+}
+
+.progress > .one {
+    top: 0;
+    left: 0;
+}
+
+.progress > .two {
+    top: 0;
+    left: calc(30px + 60px);
+}
+
+.progress > .three {
+    top: 0;
+    right: calc(30px + 60px);
+}
+
+.progress > .four {
+    top: 0;
+    right: 0;
+}
+
+.progress > .onetotwo,
+.progress > .twotothree,
+.progress > .threetofour {
+    position: absolute;
+    width: calc(60px);
+    top: 45%;
+    border-bottom: 3px solid var(--dark-yellow);
+}
+
+.progress .onetotwo {
+    left: 30px;
+}
+
+.progress .twotothree {
+    width: 62px;
+    left: calc(30px + 88px);
+}
+
+.progress .threetofour {
+    right: 30px;
+}
+
+
+.step {
+    background-color: white;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    padding: 70px 0;
+}
+
+.step > .title-container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.step .title {
+    color: var(--dark-red);
+}
+
+.step .subtitle {
+    width: 70%;
+}
+
+/* THE FORM MIGHT BE CHANGED LATER ON INTO A DIV */
+.step1 > .form {
+    background-color: var(--blue);
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    gap: 10px;
+    padding: 12px;
+    border-radius: 10px;
+    width: 80%;
+}
+
+.step1 > .form > .date-field {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    color: white;
+    gap: 10px;
+
+    flex: 1 1 300px;
+}
+
+.step1 > .form > .date-field label {
+    padding-left: 7px;
+    font-weight: 600;
+}
+
+.step1 > .form > .date-field input[type="date"] {
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-radius: 7px;
+    padding: 0 10px;
+    font-weight: 600;
+}
+
+.step .next {
+    border: none;
+    border-radius: 7px;
+    font-weight: 700;
+    height: 40px;
+    color: white;
+    padding: 5px 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex: 0 0 fit-content;
+}
+
+.interest-container {
+    width: 80%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px 60px;
+}
+
+.interest-container > .interest {
+    border: none;
+    background-color: white;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, .3);
+    border-radius: 20px;
+    padding: 20px 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: 0 0 300px;
+    width: 450px;
+    aspect-ratio: 1/.5;
+    cursor: pointer;
+}
+
+.interest-container .interest > img {
+    width: 70%;
+    border-radius: 10px;
+}
+
+.interest-container > .interest > p {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.interest-container > .interest > img,
+.interest-container > .interest > p {
+    pointer-events: none;
+}
+
+
+
+
+
+
+/* ========================= EVENTS CALENDAR PAGE ============================== */
+
+.calendar {
+    padding: 60px 0 70px;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+}
+
+.calendar .title:first-child {
+    color: var(--blue);
+}
+
+.calendar .title:last-child {
+    color: var(--dark-red);
+}
+
+.calendar .calendar-container {
+    width: 100%;
+    aspect-ratio: 16/9;
+    border: 1px solid black;
+}
+
+
+
+
+
+
+
+
+
+/* ========================= SITES PAGE ============================== */
+
+.listofsites {
+    justify-content: center;
+    align-items: center;
+    padding: 70px 0;
+    background-color: white;
+}
+
+
+
+
+
+/* ========================= SPECIFIC SITES PAGE ============================== */
+
+.details,
+.descriptions,
+.street-view,
+.operate,
+.map,
+.reviews,
+.submit-review {
+    padding: 30px 7vw;
+    gap: 15px;
+    /* border: 1px solid black; */
+}
+
+.details > .title-container {
+    width: 50%;
+}
+
+.title-container > .location {
+    display: flex;
+    gap: 15px;
+}
+
+.title-container > .location > .pin-icon {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-size: 25px;
+    color: var(--dark-red);
+    width: fit-content;
+}
+
+.title-container > .location > .pin-icon::before {
+    font-family: 'Remixicon';
+    content: '\EF09';
+}
+
+.title-container > .location > .address {
+    font-size: 17px;
+}
+
+.operate {
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.operate > div {
+    flex: 1 0 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-weight: 600;
+}
+
+.reviews {
+    justify-content: center;
+    align-items: center;
+}
+
+.submit-review > form {
+    background-color: var(--blue);
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.submit-review > form > div {
+    border-radius: 10px;
+    background-color: white;
+    padding: 50px;
+    
+
+    display: flex;
+    gap: 30px;
+}
+
+.submit-review > form .input-field {
+    display: flex;
+    column-gap: 50px
+}
+
+.submit-review > form .input-field > label {
+    font-size: 20px;
+}
+
+.submit-review > form .input-field > input[type="text"] {
+    border: none;
+    background-color: #f0f1f5;
+    height: 42px;
+    padding: 12px 30px;
+}
+
+/* MIGHT BE CHANGED LATER ON */
+
+
+
+
+/* ========================= CONTACT PAGE ========================= */
+
+.faqs {
+    padding: 40px 10vw;
+    background-color: white;
+
+    gap: 60px;
+}
+
+.faqs > .title {
+    width: 100%;
+    text-align: center;
+    color: var(--dark-red);
+}
+
+.faqs > .question-container {
+    display: flex;
+    gap: 40px;
+}
+
+.faqs > .question-container > .question {
+    display: flex;
+    gap: 10px;
+}
+
+.question > p {
+    padding: 0 20px;
+}
+
+.contact-form {
+    background-color: var(--yellow);
+    padding: 70px 10vw;
+    gap: 50px;
+}
+
+.contact-form > .title-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 0 30px;
+    color: white;
+}
+
+.contact-form > .title-container > .title,
+.contact-form > .title-container > .subtitle {
+    text-align: right;
+}
+
+.contact-form > form {
+    display: flex;
+    border-radius: 50px;
+    background-color: white;
+    font-size: 18px;
+    padding: 50px;
+    gap: 20px;
+}
+
+.contact-form > form label {
+    font-weight: 600;
+    color: var(--dark-red);
+}
+
+.contact-form > form .input-field {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form > form > .fnamelname-field {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.contact-form > form > .fnamelname-field > .input-field {
+    flex: 1 1 300px;
+}
+
+.contact-form > form input[type="text"],
+.contact-form > form input[type="email"] {
+    height: 42px;
+    width: 100%;
+    padding: 0 20px;
+    font-weight: 600;
+}
+
+.contact-form > form input[type="text"],
+.contact-form > form input[type="email"],
+.contact-form > form textarea {
+    border: 2px solid var(--blue);
+    border-radius: 20px;
+}
+
+.contact-form > form textarea {
+    height: calc(38px * 5);
+    padding: 10px 20px 2px;
+    resize: none;
+    font-weight: 600;
+}
+
+.contact-form > form > .input-field:last-child {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.contact-form > form #submit {
+    color: white;
+    border: none;
+    background-color: var(--dark-red);
+    height: 42px;
+    padding: 0 50px;
+    border-radius: 20px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* ========================= LOGIN PAGE ========================= */
+
+.image-container,
+.form-container {
+    width: 80%;
+}
+
+.form-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 50px;
+    border-radius: 50px;
+    flex-wrap: wrap;
+    gap: 30px 100px;
+    color: white;
+}
+
+.form-container .title {
+    font-size: 35px;
+    flex: 0 0 400px;
+}
+
+.form-container > form {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 350px;
+}   
+
+.form-container > form > .input-field {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.form-container > form > .input-field > label {
+    padding: 0 10px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.form-container > form > .input-field > input {
+    border: none;
+    height: 42px;
+    border-radius: 10px;
+}
+
+.form-container > form > .input-field > input[type="text"],
+.form-container > form > .input-field > input[type="password"] {
+    background-color: white;
+    font-weight: 600;
+    padding: 12px 25px;
+    color: black;
+}
+
+.form-container > form > .input-field > input[type="submit"] {
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.form-container > form a:hover {
+    text-decoration: underline;
+}
+
+.form-container > form > .input-field > a {
+    padding-top: 10px;
+    text-align: right;
+    color: white;
+    font-weight: 500;
+}
+
+.form-container > form > p {
+    padding-top: 10px;
+    text-align: center;
+}
+
+.form-container > form > p > a {
+    font-weight: 600;
+    color: white;
+}
+
+@media print {
+
+    body *:not(.toprint):not(.toprint *){
+        visibility: hidden;
+    }
+    /* 
+        Map for the site
+
+    */
+}

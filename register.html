@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>T-SPOT Bulacan</title>
+        <link rel="stylesheet" href="style.css">
+        <style>
+            body {
+                width: 100vw;
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 20px;
+            }
+            .form-container {
+                background-color: var(--blue);
+                flex-direction: row;
+            }
+            .form-container > .title {
+                text-align: left;
+            }
+            .form-container > form {
+                gap: 15px;
+            }
+            .image-container {
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                max-height: 120px;
+                overflow: hidden;
+            }
+            .image-container > img {
+                height: 250px;
+            }
+            form > .input-field > input[type="submit"] {
+                margin-top: 20px;
+                background-color: var(--yellow);
+            }
+        </style>
+    </head>
+    <body class="vertical">
+        <div class="section image-container">
+            <img src="images/tspotbulacan-logo.png" alt="">
+        </div>
+        <div class="section form-container">
+            <h1 class="title">Create Account</h1>
+            <form action="">
+                <div class="input-field">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name">
+                </div>
+                <div class="input-field">
+                    <label for="email">Email</label>
+                    <input type="text" name="email" id="email">
+                </div>
+                <div class="input-field">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password">
+                </div>
+                <div class="input-field">
+                    <input type="submit" name="submit" id="submit" value="Sign Up">
+                </div>
+                <p>Already have an account? <a href="login.html">Log in.</a></p>
+            </form>
+        </div>
+    </body>
+</html>

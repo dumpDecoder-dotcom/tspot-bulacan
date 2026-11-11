@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>T-SPOT Bulacan | Administrator Mode</title>
+        <link rel="stylesheet" href="adminstyle.css">
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+        <script src="adminscript.js"></script>
+    </head>
+    <body>
+        <aside id="sidebar">
+            <ul>
+                <li>
+                    <img src="images/tspotbulacan-logo.png" alt="T-SPOT Bulacan Logo">
+                    <button id="toggle-btn" onclick="toggleSidebar()"></button>
+                </li> 
+                <li><a href="admin-home.html"><span></span><p>Dashboard</p></a></li>
+                <li><a href="admin-contents.html"><span></span><p>Content</p></a></li>
+                <li class="active"><a href="admin-users.html"><span></span><p>Users</p></a></li>
+            </ul>
+            <button id="logout-btn"><span></span><p>Log Out</p></button>
+        </aside>
+        <main>
+            <div class="header">
+                <p>Hello, <b>Admin!</b></p>
+            </div>
+            <div class="contents">
+                <div class="title-container">
+                    <h2 class="title">Users</h2>
+                    <p class="subtitle">Admin / <span>Users</span></p>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>

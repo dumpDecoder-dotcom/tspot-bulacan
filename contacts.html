@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>T-SPOT Bulacan</title>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+        <style>
+            body {
+                background: url(images/contact-background.png) no-repeat center center fixed;
+                background-size: cover;
+            }
+            .contact-image {
+                background-color: white;
+            }
+            .contact-image > img {
+                width: 100%;
+            }
+
+            footer .image-here {
+                background: url(images/tspotbulacan-logo.png) center;
+                background-size: cover;
+                width: 150px;
+                height: 100px;
+            }
+
+            footer,
+            .credits {
+                background-color: white;
+                color: black;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <img src="images/tspotbulacan-logo.png" alt="T-SPOT Bulacan Logo"/>
+            <ul class="nav-list">
+                <li><a href="homepage.html">Home</a></li>
+                <li><a href="sites.html">Sites</a></li>
+                <li><a href="itenerarypage.html">Itenerary Planner</a></li>
+                <li><a href="eventcalendar.html">Events Calendar</a></li>
+                <li><a href="contacts.html">Contact/Help</a></li>
+                <li><a href="">Sign In</a></li>
+            </ul>
+        </header>
+        <div class="section hero vertical dark hero-end">
+            <div class="title-container">
+                <h1 class="title">Contact & Help</h1>
+                <p class="subtitle">We're here to assist you! If you have any questions or need help navigating the T Spot website, please refer to the information below. Our team is happy to help you make the most out of your visit to Bulacan.</p>
+            </div>
+        </div>
+        <div class="section faqs vertical">
+            <h1 class="title">Frequently Asked Questions (FAQs)</h1>
+            <!-- 
+                Loop through the faqs that is set by the admin
+            -->
+
+            <div class="question-container vertical">
+                <div class="question vertical">
+                    <h3 class="q-title">Question #1</h3>
+                    <p class="q-desc">How old are you?</p>
+                </div>
+                <div class="question vertical">
+                    <h3 class="q-title">Question #2</h3>
+                    <p class="q-desc">How old are you?</p>
+                </div>
+                <div class="question vertical">
+                    <h3 class="q-title">Question #3</h3>
+                    <p class="q-desc">How old are you?</p>
+                </div>
+            </div>
+        </div>
+        <div class="section contact-image">
+            <img src="images/contact-image-design.png" alt="Contact Image Design">
+        </div>
+        <div class="section contact-form vertical">
+            <div class="title-container">
+                <h1 class="title">Contact Form</h1>
+                <p class="subtitle">If you have any inquiries, suggestions, or need help, please don't hesitate to <br> contact us using the form below. We'll get back to you as soon as possible!</p>
+            </div>
+            <form class="vertical" method="POST" action="crud/store-inquiry.php">
+                <div class="fnamelname-field">
+                    <div class="input-field">
+                        <label for="fname">First Name</label>
+                        <input type="text" name="fname" id="fname">
+                    </div>
+                    <div class="input-field">
+                        <label for="lname">Last Name</label>
+                        <input type="text" name="lname" id="lname">
+                    </div>
+                </div>
+                <div class="input-field">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email">
+                </div>
+                <div class="input-field">
+                    <label for="message">Message</label>
+                    <textarea name="message" id="message" rows="30" placeholder="Write something here"></textarea>
+                </div>
+                <div class="input-field">
+                    <input type="submit" name="submit" id="submit" value="Submit">
+                </div>
+            </form>
+        </div>
+
+        <footer>
+            <div>
+                <div class="image-here"></div>
+                <h3>Plan Your Trip and Celebrate With Us - T Spot Has You Covered!</h3>
+                <p>Have questions, feedback, or suggestions? Whether you're planning a visit or want to know more about Bulacan, our team is here to help.</p>
+            </div>
+            <div>
+                <h3>CONTACT</h3>
+                <p> <span>Baranggay, Town, Bulacan</span></p>
+                <p> <span>tspotbulacan@gmail.com</span></p>
+                <p> <span>Need help? Call us <br> <span>09123456789</span></span></p>
+                <p>Help / FAQ</p>
+            </div>
+        </footer>
+        <div class="credits darker">T-Spot 2024. All rights reserved.</div>
+    </body>
+</html>

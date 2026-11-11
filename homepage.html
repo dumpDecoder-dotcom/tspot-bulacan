@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>T-SPOT Bulacan</title>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+        <style>
+            body {
+                background: url(images/home-image.png) no-repeat center center fixed;
+                background-size: cover;
+            }
+            .blue-side {
+                position: relative;
+                overflow: hidden;
+            }
+            .blue-side > img {
+                position: absolute;
+                bottom: -10px;
+                right: -20px;
+                height: 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <img src="images/tspotbulacan-logo.png" alt="T-SPOT Bulacan Logo"/>
+            <ul class="nav-list">
+                <li><a href="homepage.html">Home</a></li>
+                <li><a href="sites.html">Sites</a></li>
+                <li><a href="itenerarypage.html">Itenerary Planner</a></li>
+                <li><a href="eventcalendar.html">Events Calendar</a></li>
+                <li><a href="contacts.html">Contact/Help</a></li>
+                <li><a href="login.html">Sign In</a></li>
+            </ul>
+        </header>
+        <div class="section hero darker vertical">
+            <form action="">
+                <input class="btn-action" type="submit" name="submit" value="Search">
+                <input type="text" name="search" id="search" placeholder="Search something...">
+            </form>
+            <div class="title-container">
+                <h1 class="title">Discover the Heart of <br> Philippine Heritage in Bulacan!</h1>
+                <p class="subtitle">Experience the Culture, History, and Natural Wonders of Bulacan</p>
+                <a class="btn-anchor btn-yellow btn-mt btn-p" href="sites.html">Start Your Journey</a>
+            </div>
+        </div>
+        <div class="section highlights vertical">
+            <h1 class="title">Highlights of Bulacan</h1>
+            <div>
+                <div class="card"><div class="card-image"></div><p><b>Heritage</b></p></div>
+                <div class="card"><div class="card-image"></div><p><b>Nature</b></p></div>
+                <div class="card"><div class="card-image"></div><p><b>Festivals</b></p></div>
+                <div class="card"><div class="card-image"></div><p><b>Cuisine</b></p></div>
+            </div>
+            <!-- 
+                This Explore Now button will also redirect the user to the SITES page
+            -->
+            <a class="btn-anchor btn-red" href="sites.html">Explore Now</a>
+        </div>
+        <div class="blob">
+            <div></div><div></div><div></div><div></div>
+            <div></div><div></div><div></div><div></div>
+            <div></div><div></div><div></div><div></div>
+            <div></div><div></div><div></div><div></div>
+        </div>
+        <div class="section featured vertical">
+            <h1 class="title">Featured Destinations</h1>
+            <p class="subtitle">Discover the best of Bulacan with our carefully curated destinations that showcase the province's rich history, vibrant culture, and breathtaking nature.</p>
+            <div class="site-container">
+                <!-- 
+                    The amount of featured destinations will always be 6.
+
+                    This will be based according to the 6 highest rating sites
+                    and their records from the database.
+                -->
+                <a class="site-card" href="">
+                    <div class="details">
+                        <p class="name">Barasoain Church</p>
+                        <p class="city"> <span>Malolos</span></p>
+                        <p class="short-desc">The Cradle of Philippine Democracy</p>
+                    </div>
+                </a>
+                <a class="site-card" href="">
+                    <div class="details">
+                        <p class="name">Biak-na-Bato National Park</p>
+                        <p class="city"> <span>San Miguel</span></p>
+                        <p class="short-desc">Where History Meets Nature</p>
+                    </div>
+                </a>
+                <a class="site-card" href="">
+                    <div class="details">
+                        <p class="name">Biak-na-Bato National Park</p>
+                        <p class="city"> <span>San Miguel</span></p>
+                        <p class="short-desc">Where History Meets Nature</p>
+                    </div>
+                </a>
+                <a class="site-card" href="">
+                    <div class="details">
+                        <p class="name">Biak-na-Bato National Park</p>
+                        <p class="city"> <span>San Miguel</span></p>
+                        <p class="short-desc">Where History Meets Nature</p>
+                    </div>
+                </a>
+                <a class="site-card" href="">
+                    <div class="details">
+                        <p class="name">Biak-na-Bato National Park</p>
+                        <p class="city"> <span>San Miguel</span></p>
+                        <p class="short-desc">Where History Meets Nature</p>
+                    </div>
+                </a>
+                <a class="site-card" href="">
+                    <div class="details">
+                        <p class="name">Biak-na-Bato National Park</p>
+                        <p class="city"> <span>San Miguel</span></p>
+                        <p class="short-desc">Where History Meets Nature</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="section itenerary vertical">
+            <div class="red-side">
+                <h2 class="title">Plan Your Perfect <br> Bulacan Adventure</h2>
+                <p class="subtitle">Your Personalized Travel Guide to Bulacan</p>
+                <p>Create your dream trip to Bulacan with our easy-to-use itinerary planner. Choose from must-see destinations, hidden gems, and exciting activities tailored to your preferences.</p>
+                <!-- 
+                    This Itenerary Planner button will redirect the user to the ITENERARY PLANNER page
+                -->
+                <a class="btn-anchor btn-blue" href="itenerarypage.html">Itenerary Planner</a>
+                <img src="images/yellow-suitcase.png" alt="Yellow Suitcase">
+            </div>
+            <div class="blue-side">
+                <div><p>Add destinations to your itinerary with a single click.</p></div>
+                <div><p>Get recommended travel routes and durations.</p></div>
+                <div><p>Save, edit, and share your itinerary with friends and family.</p></div>
+                <img src="images/calendar-graphics.png" alt="Calendar Graphics">
+            </div>
+        </div>
+        <div class="section events vertical">
+            <h2 class="title">Stay in the Know with Bulacan's Events Calendar</h2>
+            <p class="subtitle">From colorful festivals to cultural events, find out what's happening in Bulacan all year round. Our events calendar keeps you updated so you can join the fun.</p>
+            <div class="map"></div>
+        </div>
+        <footer>
+            <div>
+                <img src="images/tspotbulacan-white-logo.png" alt="T-SPOT Bulacan Logo">
+                <h3>Plan Your Trip and Celebrate With Us - T Spot Has You Covered!</h3>
+                <p>Have questions, feedback, or suggestions? Whether you're planning a visit or want to know more about Bulacan, our team is here to help.</p>
+            </div>
+            <div>
+                <h3>CONTACT</h3>
+                <p> <span>Baranggay, Town, Bulacan</span></p>
+                <p> <span>tspotbulacan@gmail.com</span></p>
+                <p> <span>Need help? Call us <br> <span>09123456789</span></span></p>
+                <p>Help / FAQ</p>
+            </div>
+        </footer>
+        <div class="credits darker">T-Spot 2024. All rights reserved.</div>
+    </body>
+</html>

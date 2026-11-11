@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>T-SPOT Bulacan | Administrator Mode</title>
+        <link rel="stylesheet" href="adminstyle.css">
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+        <script src="adminscript.js"></script>
+    </head>
+    <body>
+        <aside id="sidebar">
+            <ul>
+                <li>
+                    <img src="images/tspotbulacan-logo.png" alt="T-SPOT Bulacan Logo">
+                    <button id="toggle-btn" onclick="toggleSidebar()"></button>
+                </li> 
+                <li><a href="admin-home.html"><span></span><p>Dashboard</p></a></li>
+                <li class="active"><a href="admin-contents.html"><span></span><p>Content</p></a></li>
+                <li><a href="admin-users.html"><span></span><p>Users</p></a></li>
+            </ul>
+            <button id="logout-btn"><span></span><p>Log Out</p></button>
+        </aside>
+        <main>
+            <div class="header" id="header">
+                <p>Hello, <b>Admin!</b></p>
+            </div>
+            <div class="contents" id="contents">
+                <div class="content-heading">
+                    <div class="title-container">
+                        <h2 class="title">Add Site</h2>
+                        <p class="subtitle">Admin / Content / <span>Add Site</span></p>
+                    </div>
+                    <a href="admin-contents.html#sites"></a>
+                </div>
+                <form class="vertical" action="">
+                    <div class="text-field vertical">
+                        <label for="name">Name</label>
+                        <input type="text" name="name" id="name">
+                    </div>
+                    <div class="text-field vertical">
+                        <label for="location">Location</label>
+                        <input type="text" name="location" id="location">
+                    </div>
+                    <div class="text-field vertical">
+                        <label for="description">Description</label>
+                        <textarea name="description" id="description"></textarea>
+                    </div>
+                    <div class="text-field vertical">
+                        <label for="history">History</label>
+                        <textarea name="history" id="history"></textarea>
+                    </div>
+                    <div class="images-field vertical">
+                        <label for="">Images</label>
+                        <div class="image-field">
+                            <label for="streetview">360° View Image</label>
+                            <input type="file" name="streetview" id="streetview" accept=".jpg, .png" hidden>
+                            <label for="images">Select Image/s Here</label>
+                            <input type="file" name="images" id="images" accept=".jpg, .png" hidden multiple>
+                        </div>
+                    </div>
+
+                    <div class="text-field vertical">
+                        <label for="map">Google Map Embed Link</label>
+                        <input type="text" name="map" id="map">
+                    </div>
+
+
+                    <div class="text-field vertical">
+                        <label for="">Operating Hours</label>
+                        <div class="text-field">
+                            <label for="day">Day</label>
+                            <input type="text" name="day" id="day">
+                        </div>
+                        <div class="text-field">
+                            <label for="start-time">Start</label>
+                            <input type="time" name="start-time" id="start-time">
+                        </div>
+                        <div class="text-field">
+                            <label for="end-time">End</label>
+                            <input type="time" name="end-time" id="end-time">
+                        </div>
+                    </div>
+
+
+                    <div class="button-field">
+                        <input type="submit" name="submit" id="submit" value="Add">
+                    </div>
+                </form>
+            </div>
+        </main>
+    </body>
+</html>

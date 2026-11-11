@@ -1,0 +1,538 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+:root {
+    --red: #d00e00;
+    --blue: #11569c;
+    --yellow: #ffb700;
+    --dark-red: #b91717;
+    --dark-yellow: #fea621;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    width: 100vw;
+    min-height: 100vh;
+    min-height: 100dvh;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    overflow: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+#sidebar {
+    width: 250px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .2);
+    position: sticky;
+    top: 0;
+    left: 0;
+    padding: 0 22px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: 300ms all ease;
+}
+
+#sidebar.close {
+    width: 70px;
+    padding: 0 14px 30px;
+    overflow: hidden;
+}
+
+#sidebar > ul li {
+    list-style-type: none;
+    margin-bottom: 20px;
+    text-wrap: nowrap;
+}
+
+#sidebar button {
+    text-wrap: nowrap;
+}
+
+#sidebar > ul li:first-child {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 12vh;
+    overflow: hidden;
+}
+
+#sidebar > ul > li.active a {
+    font-weight: 700;
+    color: var(--dark-red);
+}
+
+#sidebar a,
+#sidebar button {
+    border-radius: 5px;
+}
+
+#sidebar a:hover,
+#sidebar button:hover {
+    background-color: #cdcdcd;
+}
+
+#sidebar > ul > li a,
+#sidebar > button {
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 23px;
+    color: #a5a5a5;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+#sidebar span {
+    flex: 0 0 40px;
+    font-size: 30px;
+    text-align: center;
+}
+
+#sidebar li:nth-child(2) span::before {
+    font-family: 'Remixicon';
+    content: '\EC13';
+}
+
+#sidebar li:nth-child(3) span::before {
+    font-family: 'Remixicon';
+    content: '\EF09';
+}
+
+#sidebar li:nth-child(4) span::before {
+    font-family: 'Remixicon';
+    content: '\F273';
+}
+
+#sidebar > button {
+    border: none;
+    background: transparent;
+    color: var(--dark-red);
+    font-weight: 700;
+    cursor: pointer;
+}
+
+#sidebar > button > span::before {
+    font-family: 'Remixicon';
+    content: '\EEDA';
+}
+
+
+
+#toggle-btn {
+    flex: 0 0 45px;
+    width: 45px;
+    height: 45px;
+    font-size: 30px;
+    font-weight: 700;
+    border-radius: 10px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+#toggle-btn:hover {
+    background-color: #cdcdcd;
+}
+
+#sidebar > ul li:first-child img {
+    height: 110px;
+}
+
+
+#toggle-btn::before {
+    font-family: 'Remixicon';
+    content: '\EF34';
+}
+
+
+
+
+main {
+    /*  */
+}
+
+
+.header {
+    min-height: 12vh;
+    background-color: white;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 30px;
+    font-size: 18px;
+}
+
+
+
+
+
+
+
+
+
+.title-container > .title {
+    font-size: 30px;
+}
+
+.title-container > .subtitle {
+    font-weight: 600;
+    color: #a5a5a5;
+}
+
+.title-container > .subtitle > span {
+    font-weight: 700;
+    color: var(--dark-red);
+}
+
+
+.title-small {
+    font-size: 25px;
+}
+
+.view-all,
+.add-item {
+    border: none;
+    font-weight: 600;
+    font-size: 14px;
+    color: #a5a5a5;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.view-all:hover,
+.add-item:hover {
+    text-decoration: underline;
+}
+
+
+
+.title-container > div {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.title-container > div > span {
+    color: #a5a5a5;
+    pointer-events: none;
+}
+
+.title-container > div > .add-item {
+    font-weight: 700;
+    color: var(--blue);
+}
+
+main {
+
+}
+
+.contents {
+    background-color: #efeff1;
+    height: 88vh;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    overflow-y: scroll;
+}
+
+.sites-container > .title-container,
+.nature-container > .title-container,
+.festival-container > .title-container,
+.cuisine-container > .title-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+
+
+
+.sites-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sites {
+    max-width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 30px 20px;
+}
+
+.sites > .site {
+    background-color: white;
+    border-radius: 15px;
+    padding: 15px;
+    width: 330px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.site .image {
+    border-radius: 10px;
+    width: 100%;
+    height: 160px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.image > img {
+    width: 100%;
+    height: 100%;
+}
+
+.details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.details .info {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.details .name {
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.details > .info > .place::before {
+    color: var(--dark-red);
+    font-family: 'Remixicon';
+    content: '\EF09';
+    margin-right: 5px;
+}
+
+.details > .info > .description {
+    font-style: italic;
+}
+
+.details > .manage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    gap: 10px;
+}
+
+.manage a {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    text-align: center;
+    text-decoration: none;
+}
+
+.manage a:hover {
+    background-color: #cdcdcd;
+}
+
+.manage > a:first-child::before {
+    font-family: 'Remixicon';
+    content: '\EC82';
+}
+
+.manage > a:last-child::before {
+    font-family: 'Remixicon';
+    content: '\EC26';
+}
+
+.site p {
+    font-size: 14px;
+}
+
+
+
+
+
+
+
+
+
+
+.contents > form {
+    width: 100%;
+    background-color: white;
+    border-radius: 30px;
+    padding: 30px;
+
+    display: flex;
+    gap: 20px;
+}
+
+form label {
+    cursor: pointer;
+}
+
+.contents > form .text-field,
+.contents > form > .images-field,
+.contents > form > .button-field {
+    display: flex;
+    gap: 5px 15px;
+}
+
+.contents > form > .text-field input {
+    border: none;
+    border-radius: 10px;
+    background-color: #efeff1;
+    height: 38px;
+    padding: 0 20px;
+    font-weight: 600;
+}
+
+.text-field > textarea {
+    border: none;
+    border-radius: 10px;
+    background-color: #efeff1;
+    height: calc(38px * 3);
+    padding: 10px 20px 2px;
+    resize: none;
+    font-weight: 600;
+}
+
+.image-field {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.image-field > label {
+    flex: 0 1 350px;
+    height: 200px;
+    border: 2px dashed #a5a5a5;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    color: #a5a5a5;
+}
+
+.button-field {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.contents > form > .text-field > .text-field {
+    justify-content: flex-end;
+    align-items: center;
+    max-width: 350px;
+    flex-shrink: 1;
+    flex-grow: 0;
+}
+
+.contents > form > .text-field > .text-field > input {
+    width: 200px;
+    border: none;
+    border-radius: 10px;
+    background-color: #efeff1;
+    height: 38px;
+    padding: 0 20px;
+    font-weight: 600;
+}
+
+.button-field > input[type="submit"] {
+    border: none;
+    border-radius: 10px;
+    background-color: var(--blue);
+    color: white;
+    height: 38px;
+    padding: 0 25px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+
+
+.content-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content-heading > a {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--blue);
+    color: white;
+    font-size: 30px;
+    font-weight: 600;
+    text-decoration: none;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-heading > a::before {
+    font-family: 'Remixicon';
+    content: '\EA57';
+}
+
+
+
+
+
+
+
+
+
+
+
+.vertical {
+    flex-direction: column;
+}
+
+.horizontal {
+    flex-direction: row;
+}
+
+.yellow {
+    color: var(--dark-yellow);
+}
+
+.red {
+    color: var(--dark-red);
+}
+
+
+
+
+
+@media screen and (max-width: 736px) {
+    .contents, .header {
+        max-width: calc(100vw - 70px);
+    }
+}
+

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>T-SPOT Bulacan</title>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+        <style>
+            body {
+                background: url(images/sites-background.png) no-repeat center center fixed;
+                background-size: cover;
+            }
+            .hero {
+                position: relative;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <img src="images/tspotbulacan-logo.png" alt="T-SPOT Bulacan Logo"/>
+            <ul class="nav-list">
+                <li><a href="homepage.html">Home</a></li>
+                <li><a href="sites.html">Sites</a></li>
+                <li><a href="itenerarypage.html">Itenerary Planner</a></li>
+                <li><a href="eventcalendar.html">Events Calendar</a></li>
+                <li><a href="contacts.html">Contact/Help</a></li>
+                <li><a href="">Sign In</a></li>
+            </ul>
+        </header>
+        <div class="section hero hero-end vertical">
+            <div class="title-container">
+                <h1 class="title">Explore Bulacan's <br> Heritage and Wonders</h1>
+                <p class="subtitle">Bulacan is a province rich in history, culture, and natural beauty. From historical landmarks that played pivotal roles in the Philippine Revolution to breathtaking natural wonders, Bulacan has something for every type of traveler. Explore our featured sites and uncover the stories behind each destination.</p>
+            </div>
+            <div class="search-site">
+                <form action="crud/search-content.php" method="POST">
+                    <input type="text" name="keyword" id="keyword" placeholder="Keyword">
+                    <select name="category" id="category">
+                        <option value="All" selected>All (Category)</option>
+                        <option value="Sites">Sites</option>
+                        <option value="Nature">Nature</option>
+                        <option value="Festival">Festival</option>
+                        <option value="Food">Food</option>
+
+                    </select>
+                    <select name="location" id="location">
+                        <option value="All" selected>All (Location/City)</option>
+                        <option value="Angat">Angat</option>
+                        <option value="Balagtas">Balagtas</option>
+                        <option value="Baliwag">Baliwag</option>
+                        <option value="Bocaue">Bocaue</option>
+                        <option value="Bulakan">Bulakan</option>
+                        <option value="Bustos">Bustos</option>
+                        <option value="Calumpit">Calumpit</option>
+                        <option value="Dona Remedios Trinidad">Dona Remedios Trinidad</option>
+                        <option value="Guiguinto">Guiguinto</option>
+                        <option value="Hagonoy">Hagonoy</option>
+                        <option value="Malolos">Malolos</option>
+                        <option value="Marilao">Marilao</option>
+                        <option value="Meycauayan">Meycauayan</option>
+                        <option value="Norzagaray">Norzagaray</option>
+                        <option value="Obando">Obando</option>
+                        <option value="Pandi">Pandi</option>
+                        <option value="Paombong">Paombong</option>
+                        <option value="Plaridel">Plaridel</option>
+                        <option value="Pulilan">Pulilan</option>
+                        <option value="San Ildefonso">San Ildefonso</option>
+                        <option value="San Jose Del Monte">San Jose Del Monte</option>
+                        <option value="San Miguel">San Miguel</option>
+                        <option value="San Rafael">San Rafael</option>
+                        <option value="Santa Maria">Santa Maria</option>
+                    </select>
+                    <button type="submit" name="submit" id="search-button"></button>
+                </form>
+            </div>
+        </div>
+        <div class="section listofsites">
+            <div class="site-container">
+                <!-- 
+                    The amount of featured destinations will always be 6.
+
+                    This will be based according to the 6 highest rating sites
+                    and their records from the database.
+                -->
+                <a class="site-card" href="">
+                    <div class="details">
+                        <p class="name">Biak-na-Bato National Park</p>
+                        <p class="city"> <span>San Miguel</span></p>
+                        <p class="short-desc">Where History Meets Nature</p>
+                    </div>
+                </a>
+                <a class="site-card" href="">
+                    <div class="details">
+                        <p class="name">Biak-na-Bato National Park</p>
+                        <p class="city"> <span>San Miguel</span></p>
+                        <p class="short-desc">Where History Meets Nature</p>
+                    </div>
+                </a>
+                <a class="site-card" href="">
+                    <div class="details">
+                        <p class="name">Biak-na-Bato National Park</p>
+                        <p class="city"> <span>San Miguel</span></p>
+                        <p class="short-desc">Where History Meets Nature</p>
+                    </div>
+                </a>
+                <a class="site-card" href="">
+                    <div class="details">
+                        <p class="name">Biak-na-Bato National Park</p>
+                        <p class="city"> <span>San Miguel</span></p>
+                        <p class="short-desc">Where History Meets Nature</p>
+                    </div>
+                </a>
+                <a class="site-card" href="">
+                    <div class="details">
+                        <p class="name">Biak-na-Bato National Park</p>
+                        <p class="city"> <span>San Miguel</span></p>
+                        <p class="short-desc">Where History Meets Nature</p>
+                    </div>
+                </a>
+                <a class="site-card" href="">
+                    <div class="details">
+                        <p class="name">Biak-na-Bato National Park</p>
+                        <p class="city"> <span>San Miguel</span></p>
+                        <p class="short-desc">Where History Meets Nature</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <footer>
+            <div>
+                <img src="images/tspotbulacan-white-logo.png" alt="T-SPOT Bulacan Logo">
+                <h3>Plan Your Trip and Celebrate With Us - T Spot Has You Covered!</h3>
+                <p>Have questions, feedback, or suggestions? Whether you're planning a visit or want to know more about Bulacan, our team is here to help.</p>
+            </div>
+            <div>
+                <h3>CONTACT</h3>
+                <p> <span>Baranggay, Town, Bulacan</span></p>
+                <p> <span>tspotbulacan@gmail.com</span></p>
+                <p> <span>Need help? Call us <br> <span>09123456789</span></span></p>
+                <p>Help / FAQ</p>
+            </div>
+        </footer>
+        <div class="credits">T-Spot 2024. All rights reserved.</div>
+    </body>
+</html>

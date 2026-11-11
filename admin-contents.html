@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>T-SPOT Bulacan | Administrator Mode</title>
+        <link rel="stylesheet" href="adminstyle.css">
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+        <script src="adminscript.js"></script>
+    </head>
+    <body>
+        <aside id="sidebar">
+            <ul>
+                <li>
+                    <img src="images/tspotbulacan-logo.png" alt="T-SPOT Bulacan Logo">
+                    <button id="toggle-btn" onclick="toggleSidebar()"></button>
+                </li> 
+                <li><a href="admin-home.html"><span></span><p>Dashboard</p></a></li>
+                <li class="active"><a href="admin-contents.html"><span></span><p>Content</p></a></li>
+                <li><a href="admin-users.html"><span></span><p>Users</p></a></li>
+            </ul>
+            <button id="logout-btn"><span></span><p>Log Out</p></button>
+        </aside>
+        <main>
+            <div class="header">
+                <p>Hello, <b>Admin!</b></p>
+            </div>
+            <div class="contents">
+                <div class="title-container">
+                    <h2 class="title">Content</h2>
+                    <p class="subtitle">Admin / <span>Content</span></p>
+                </div>
+                
+                <div class="sites-container">
+                    <div class="title-container">
+                        <h2 id="sites" class="title-small">Sites</h2>
+                        <div>
+                            <button class="view-all">View All</button>
+                            <span>|</span>
+                            <a class="add-item" href="addsite.html">Add Item</a>
+                        </div>
+                    </div>
+                    <div class="sites">
+                        <div class="site">
+                            <div class="image">
+                                <img src="images/barasoain.png" alt="Site Image">
+                            </div>
+                            <div class="details">
+                                <div class="info">
+                                    <p class="name">Barasoain Church</p>
+                                    <p class="place">Malolos, Bulacan</p>
+                                    <p class="description">"Cradle of Democracy in the East"</p>
+                                </div>
+                                <div class="manage">
+                                    <a class="manage-btn yellow" href=""></a>
+                                    <a class="manage-btn red" href=""></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="site">
+                            <div class="image">
+                                <img src="images/itenerary-page-background.png" alt="Site Image">
+                            </div>
+                            <div class="details">
+                                <div class="info">
+                                    <p class="name">Barasoain Church</p>
+                                    <p class="place">Malolos, Bulacan</p>
+                                    <p class="description">Cradle of Democracy in the East</p>
+                                </div>
+                                <div class="manage">
+                                    <a class="manage-btn yellow" href=""></a>
+                                    <a class="manage-btn red" href=""></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="site">
+                            <div class="image">
+                                <img src="images/event-calendar-background.png" alt="Site Image">
+                            </div>
+                            <div class="details">
+                                <div class="info">
+                                    <p class="name">Barasoain Church</p>
+                                    <p class="place">Malolos, Bulacan</p>
+                                    <p class="description">Cradle of Democracy in the East</p>
+                                </div>
+                                <div class="manage">
+                                    <a class="manage-btn yellow" href=""></a>
+                                    <a class="manage-btn red" href=""></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+                <div class="nature-container">
+                    <div class="title-container">
+                        <h2 id="nature" class="title-small">Nature</h2>
+                        <div>
+                            <button class="view-all">View All</button>
+                            <span>|</span>
+                            <a class="add-item" href="">Add Item</a>
+                        </div>
+                    </div>
+                    
+                </div>
+
+
+
+
+
+
+                <div class="festival-container">
+                    <div class="title-container">
+                        <h2 id="festival" class="title-small">Festival</h2>
+                        <div>
+                            <button class="view-all">View All</button>
+                            <span>|</span>
+                            <a class="add-item" href="">Add Item</a>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+                <div class="cuisine-container">
+                    <div class="title-container">
+                        <h2 id="events" class="title-small">Cuisine</h2>
+                        <div>
+                            <button class="view-all">View All</button>
+                            <span>|</span>
+                            <a class="add-item" href="addevents.html">Add Item</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>
