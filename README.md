@@ -34,7 +34,7 @@
 
 &#x20;  ## My Role
 
-&#x20;  YOUR ROLE (for example: Front-End Developer, Project Leader)
+&#x20;  Full Stack Developer
 
 
 
